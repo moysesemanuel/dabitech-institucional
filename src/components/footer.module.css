@@ -1,0 +1,20 @@
+.footer {
+  background: var(--navy);
+  color: var(--muted-on-dark);
+  border-top: 1px solid var(--rule-on-dark);
+  padding: 2rem 0;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.logo {
+  display: block;
+  opacity: 0.9;
+}

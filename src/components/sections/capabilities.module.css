@@ -1,0 +1,21 @@
+.list {
+  margin-top: 2.5rem;
+}
+
+.item {
+  padding: 2rem 0;
+}
+.item + .item {
+  border-top: 1px solid var(--rule);
+}
+
+.name {
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+}
+
+.desc {
+  color: var(--ink-muted);
+  margin-top: 0.4rem;
+  max-width: 58ch;
+}

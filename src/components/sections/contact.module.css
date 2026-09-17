@@ -1,0 +1,16 @@
+.contact h2 {
+  max-width: 14ch;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.note {
+  color: var(--muted-on-dark);
+  font-size: 0.95rem;
+}

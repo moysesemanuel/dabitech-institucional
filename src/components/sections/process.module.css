@@ -1,0 +1,42 @@
+.list {
+  margin-top: 2.5rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.75rem;
+  padding: 2rem 0;
+  align-items: start;
+}
+.item + .item {
+  border-top: 1px solid var(--rule);
+}
+
+.num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: var(--rule);
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.item p {
+  color: var(--ink-muted);
+  max-width: 52ch;
+}
+
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+  }
+  .num {
+    font-size: 2rem;
+  }
+}
