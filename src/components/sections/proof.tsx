@@ -4,6 +4,7 @@ type Stage = "produto" | "dev" | "infra";
 
 const SYSTEMS: {
   name: string;
+  url?: string;
   resolve: string;
   stack: string;
   stage: string;
@@ -11,6 +12,7 @@ const SYSTEMS: {
 }[] = [
   {
     name: "DaBi Agendaí",
+    url: "https://dabiagendai.vercel.app/barbearias",
     resolve:
       "Agendamento online por serviço, profissional e horário, com backoffice operacional completo.",
     stack: "Next.js, Prisma, PostgreSQL",
@@ -85,7 +87,20 @@ export function Proof() {
             <tbody>
               {SYSTEMS.map((system) => (
                 <tr key={system.name}>
-                  <td className={styles.sys}>{system.name}</td>
+                  <td className={styles.sys}>
+                    {system.url ? (
+                      <a
+                        className={styles.sysLink}
+                        href={system.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {system.name}
+                      </a>
+                    ) : (
+                      system.name
+                    )}
+                  </td>
                   <td>{system.resolve}</td>
                   <td className={styles.stack}>{system.stack}</td>
                   <td>
