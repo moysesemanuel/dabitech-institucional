@@ -12,7 +12,7 @@ const SYSTEMS: {
 }[] = [
   {
     name: "DaBi Agendaí",
-    url: "https://dabiagendai.vercel.app/barbearias",
+    url: "https://agendai.dabitech.com.br/negocios/barbearias",
     resolve:
       "Agendamento online por serviço, profissional e horário, com backoffice operacional completo.",
     stack: "Next.js, Prisma, PostgreSQL",
