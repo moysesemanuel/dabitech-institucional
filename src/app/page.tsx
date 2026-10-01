@@ -1,16 +1,16 @@
 import { Hero } from "@/components/sections/hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { Process } from "@/components/sections/process";
-import { Proof } from "@/components/sections/proof";
+import { SolutionsCatalog } from "@/components/sections/solutions-catalog";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <SolutionsCatalog />
       <Capabilities />
       <Process />
-      <Proof />
       <Contact />
     </>
   );

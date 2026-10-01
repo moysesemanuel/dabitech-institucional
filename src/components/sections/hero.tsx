@@ -13,11 +13,11 @@ export function Hero() {
             como site institucional.
           </p>
           <div className={styles.actions}>
-            <Button href="mailto:contato@dabitech.com.br">
-              Falar com a DaBi Tech <span className="btnArrow">→</span>
+            <Button href="#solucoes">
+              Conhecer soluções <span className="btnArrow">→</span>
             </Button>
-            <Button href="#provas" variant="ghost">
-              Ver sistemas prontos
+            <Button href="#contato" variant="ghost">
+              Falar de um processo específico
             </Button>
           </div>
         </div>
