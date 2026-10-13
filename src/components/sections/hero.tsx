@@ -6,34 +6,19 @@ export function Hero() {
     <section id="quem-somos" className={`${styles.hero} bandDark`}>
       <div className="wrap">
         <div className="reveal">
-          <h1 className={styles.title}>Sistemas que substituem planilha, WhatsApp e papel.</h1>
+          <h1 className={styles.title}>Software para simplificar a rotina e apoiar o crescimento do seu negócio.</h1>
           <p className={styles.lede}>
-            A DaBi Tech projeta e constrói o sistema que a operação da sua empresa já deveria ter
-            — agenda, vendas, atendimento, integrações — como produto que funciona sozinho, não
-            como site institucional.
+            Conheça as soluções da DaBi Tech para organizar agendamentos, calcular preços e
+            transformar processos do dia a dia.
           </p>
           <div className={styles.actions}>
             <Button href="#solucoes">
-              Conhecer soluções <span className="btnArrow">→</span>
+              Explorar nossas soluções <span className="btnArrow">→</span>
             </Button>
-            <Button href="#contato" variant="ghost">
-              Falar de um processo específico
+            <Button href="#conheca-mais" variant="ghost">
+              Conheça a DaBi Tech
             </Button>
           </div>
-        </div>
-        <div className={styles.about}>
-          <p>
-            Trabalhamos direto no processo do negócio, não na aparência dele. Antes de desenhar
-            uma tela, mapeamos como a operação funciona hoje — o atalho combinado no WhatsApp, a
-            planilha que só uma pessoa sabe abrir, o caderno de agenda atrás do balcão — e
-            transformamos isso em um sistema com banco de dados, papel de acesso e regra de
-            negócio real por trás.
-          </p>
-          <p>
-            Atendemos quem opera por agenda, catálogo, pedido ou chamado: barbearias, estúdios,
-            e-commerces, escolas e prestadores de serviço que hoje resolvem a operação em conversa
-            solta e não conseguem tirar dali um número em que confiar.
-          </p>
         </div>
       </div>
     </section>

@@ -15,14 +15,14 @@
 
 .num {
   font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 2.75rem;
+  font-weight: 700;
+  font-size: 2rem;
   line-height: 1;
   color: var(--rule);
 }
 
 .item h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
