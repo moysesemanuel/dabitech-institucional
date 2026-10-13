@@ -1,21 +1,144 @@
-.list {
-  margin-top: 2.5rem;
+.section {
+  padding-bottom: 3.5rem;
+}
+.head :global(.sectionLede) {
+  max-width: none;
 }
 
-.item {
-  padding: 2rem 0;
-}
-.item + .item {
-  border-top: 1px solid var(--rule);
+.groupTitle {
+  margin: 2.25rem 0 1rem;
+  color: var(--text-2);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.name {
-  font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+.products,
+.custom {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.products {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.custom {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product,
+.customCard {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+.customCard {
+  padding: 1.25rem;
+  border-style: dashed;
+  background: transparent;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.agendai {
+  background: rgba(59, 130, 246, 0.2);
+  color: #a9ccff;
+}
+.price {
+  background: rgba(139, 92, 246, 0.22);
+  color: #d1bcff;
+}
+.customTag {
+  border: 1px dashed var(--border-strong);
+  color: var(--text-2);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.titleRow h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
   font-weight: 700;
 }
+.icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: rgba(47, 140, 255, 0.12);
+  color: #7fb8ff;
+}
 
-.desc {
-  color: var(--ink-muted);
-  margin-top: 0.4rem;
-  max-width: 58ch;
+.product p,
+.customCard p {
+  color: var(--text-2);
+  font-size: 0.875rem;
+}
+
+/* miniatura ao lado do texto, sem sobrepor nada */
+.thumb {
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  object-position: left top;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: #07142a;
+}
+.thumb figcaption {
+  color: var(--text-2);
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 1100px) {
+  .custom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+  .custom {
+    grid-template-columns: 1fr;
+  }
 }

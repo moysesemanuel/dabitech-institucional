@@ -1,48 +1,71 @@
+import Image from "next/image";
+import { Icon } from "@/components/icons";
+import {
+  CUSTOM_CAPABILITIES,
+  PRICE_CAPTION,
+  PRODUCT_CAPABILITIES,
+  SCREENSHOTS,
+} from "@/lib/content";
 import styles from "./capabilities.module.css";
-
-const CAPABILITIES = [
-  {
-    name: "Agendamento",
-    desc: "Agenda online por serviço, profissional, data e horário, com bloqueio automático de conflito e histórico de atendimento.",
-  },
-  {
-    name: "Gestão comercial",
-    desc: "Catálogo, estoque, pedidos e vendas organizados em um painel único, pronto para operar como ERP.",
-  },
-  {
-    name: "Integrações",
-    desc: "Sincronização entre sistemas que hoje não conversam entre si — plataformas, ERPs, marketplaces — com log de falha e reprocessamento manual.",
-  },
-  {
-    name: "Atendimento",
-    desc: "Central de chamados para organizar solicitação, prioridade e resposta, tirando o suporte do chat solto.",
-  },
-  {
-    name: "Acesso",
-    desc: "Login único e controle de papel entre múltiplos sistemas da mesma operação.",
-  },
-  {
-    name: "Precificação",
-    desc: "Cálculo de custo e preço a partir das regras reais do negócio, não de planilha ajustada manualmente.",
-  },
-];
 
 export function Capabilities() {
   return (
-    <section id="o-que-fazemos" className="bandWhite">
-      <div className="wrap">
-        <div className="reveal">
-          <h2>O que fazemos</h2>
-          <p className="sectionLede">Seis frentes que cobrem a operação do dia a dia de ponta a ponta.</p>
+    <section id="o-que-fazemos" className={styles.section}>
+      <div className="wrapWide">
+        <div className={`reveal ${styles.head}`}>
+          <h2>O que sua operação precisa resolver?</h2>
+          <p className="sectionLede">
+            Veja o que já está pronto nos nossos produtos e o que podemos construir sob medida
+            para a sua rotina.
+          </p>
         </div>
-        <div className={styles.list}>
-          {CAPABILITIES.map((capability) => (
-            <div key={capability.name} className={styles.item}>
-              <div className={styles.name}>{capability.name}</div>
-              <p className={styles.desc}>{capability.desc}</p>
-            </div>
+
+        <h3 className={styles.groupTitle}>Já disponível nos produtos</h3>
+        <ul className={styles.products}>
+          {PRODUCT_CAPABILITIES.map((item) => {
+            const shot = SCREENSHOTS[item.visual];
+            return (
+              <li key={item.name} className={styles.product}>
+                <div className={styles.productText}>
+                  <span className={`${styles.tag} ${styles[item.visual]}`}>{item.tag}</span>
+                  <div className={styles.titleRow}>
+                    <span className={styles.icon}>
+                      <Icon name={item.icon} size={22} />
+                    </span>
+                    <h4>{item.name}</h4>
+                  </div>
+                  <p>{item.desc}</p>
+                </div>
+                <figure className={styles.thumb}>
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={shot.width}
+                    height={shot.height}
+                    sizes="(max-width: 700px) 90vw, 300px"
+                  />
+                  {item.visual === "price" && <figcaption>{PRICE_CAPTION}</figcaption>}
+                </figure>
+              </li>
+            );
+          })}
+        </ul>
+
+        <h3 className={styles.groupTitle}>Possibilidades em projetos sob medida</h3>
+        <ul className={styles.custom}>
+          {CUSTOM_CAPABILITIES.map((item) => (
+            <li key={item.name} className={styles.customCard}>
+              <span className={`${styles.tag} ${styles.customTag}`}>Projeto sob medida</span>
+              <div className={styles.titleRow}>
+                <span className={styles.icon}>
+                  <Icon name={item.icon} size={22} />
+                </span>
+                <h4>{item.name}</h4>
+              </div>
+              <p>{item.desc}</p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
