@@ -1,0 +1,132 @@
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  background:
+    radial-gradient(48rem 20rem at 90% 0%, rgba(22, 139, 255, 0.16), transparent 65%),
+    var(--bg);
+}
+.hero h1 {
+  max-width: 22ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  line-height: 1.1;
+}
+.lede {
+  max-width: 62ch;
+  color: var(--text-2);
+  font-size: 1.05rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+.card h2,
+.card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+.card p,
+.card li {
+  color: var(--text-2);
+  font-size: 0.95rem;
+}
+.statement {
+  margin-bottom: 0.75rem;
+  color: var(--text) !important;
+  font-family: var(--font-display);
+  font-size: 1.3rem !important;
+  line-height: 1.3;
+}
+
+.duo,
+.ways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.ways {
+  margin-top: 2rem;
+}
+.ways ul {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.ways strong,
+.person strong {
+  color: var(--text);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.links a,
+.person a {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.links a:hover,
+.person a:hover {
+  color: var(--text);
+}
+
+.principles {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.principles li {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+.icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(47, 140, 255, 0.12);
+  color: #7fb8ff;
+}
+.principles h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.05rem;
+}
+.principles p {
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.person {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 48rem;
+}
+.cta {
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .duo,
+  .ways,
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}

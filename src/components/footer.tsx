@@ -1,95 +1,73 @@
-import { DaBiTechLogo } from "@/components/logo";
 import { BusinessHours } from "@/components/business-hours";
-import { PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/site";
+import { Icon } from "@/components/icons";
+import { DaBiTechLogo } from "@/components/logo";
+import { FOOTER_COLUMNS } from "@/lib/content";
+import { PHONE_DISPLAY, SOCIALS, WHATSAPP_URL } from "@/lib/site";
 import styles from "./footer.module.css";
-
-type FooterLink = { label: string; href?: string; external?: boolean };
-
-const COLUMNS: { title: string; links: FooterLink[] }[] = [
-  {
-    title: "Soluções",
-    links: [
-      { label: "DaBi Agendaí", href: "https://agendai.dabitech.com.br/negocios/barbearias", external: true },
-      { label: "DaBi Price", href: "#solucoes" },
-      { label: "Sistema sob medida", href: "#sob-medida" },
-    ],
-  },
-  {
-    title: "O que fazemos",
-    links: [
-      { label: "Agendamento", href: "#o-que-fazemos" },
-      { label: "Gestão comercial", href: "#o-que-fazemos" },
-      { label: "Integrações", href: "#o-que-fazemos" },
-      { label: "Atendimento", href: "#o-que-fazemos" },
-      { label: "Precificação", href: "#o-que-fazemos" },
-    ],
-  },
-  {
-    title: "Aprenda",
-    links: [
-      { label: "Como trabalhamos", href: "#como-trabalhamos" },
-      { label: "Conheça mais", href: "#conheca-mais" },
-      { label: "Blog (em breve)" },
-    ],
-  },
-  {
-    title: "Institucional",
-    links: [
-      { label: "Quem somos", href: "#conheca-mais" },
-      { label: "Contato", href: WHATSAPP_URL, external: true },
-      { label: "E-mail", href: "mailto:contato@dabitech.com.br" },
-    ],
-  },
-];
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className="wrapWide">
-        <nav aria-label="Rodapé" className={styles.columns}>
-          {COLUMNS.map((column) => (
-            <div key={column.title} className={styles.column}>
-              <h2 className={styles.colTitle}>{column.title}</h2>
-              <ul className={styles.list}>
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    {link.href ? (
-                      <a
-                        href={link.href}
-                        {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <span className={styles.soon}>{link.label}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
-        <div className={styles.bottom}>
-          <div className={styles.brand}>
-            <DaBiTechLogo className={styles.logo} width={130} variant="light" />
-            <p className={styles.tagline}>Sistemas sob medida para operações reais.</p>
-            <p className={styles.copy}>
-              © {new Date().getFullYear()} DaBi Tech — Digital Solutions.
-              <br />
-              Todos os direitos reservados.
-            </p>
-          </div>
-          <div className={styles.contact}>
-            <h2 className={styles.contactTitle}>Telefone</h2>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              {PHONE_DISPLAY}
-            </a>
-          </div>
-          <div className={styles.contact}>
-            <h2 className={styles.contactTitle}>Atendimento</h2>
-            <BusinessHours className={styles.hoursList} />
-          </div>
+      <div className={`wrapWide ${styles.grid}`}>
+        <div className={styles.brand}>
+          <DaBiTechLogo className={styles.logo} width={210} variant="light" />
+          <p className={styles.copy}>
+            © {new Date().getFullYear()} DaBi Tech. Todos os direitos reservados.
+          </p>
         </div>
+        {FOOTER_COLUMNS.map((column) => (
+          <nav key={column.title} aria-label={column.title} className={styles.column}>
+            <h2 className={styles.colTitle}>{column.title}</h2>
+            <ul className={styles.list}>
+              {column.links.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    {...("external" in link && link.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
+        <div className={styles.column}>
+          <h2 className={styles.colTitle}>Contato</h2>
+          <ul className={`${styles.list} ${styles.contact}`}>
+            <li>
+              <Icon name="mail" size={18} />
+              <a href="mailto:contato@dabitech.com.br">contato@dabitech.com.br</a>
+            </li>
+            <li>
+              <Icon name="phone" size={18} />
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <Icon name="pin" size={18} />
+              <span>Curitiba - PR</span>
+            </li>
+          </ul>
+          <BusinessHours className={styles.hours} />
+        </div>
+        <ul className={styles.social}>
+          {SOCIALS.map((social) => (
+            <li key={social.name}>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.name} da DaBi Tech (abre em nova aba)`}
+              >
+                <Icon name={social.icon} size={24} />
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );

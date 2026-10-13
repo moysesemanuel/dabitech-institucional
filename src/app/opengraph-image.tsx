@@ -19,7 +19,7 @@ async function loadGoogleFont(font: string, weight: number, text: string) {
   throw new Error(`Failed to load font: ${font}`);
 }
 
-const HEADLINE = "Sistemas que substituem planilha, WhatsApp e papel.";
+const HEADLINE = "Software para simplificar a rotina e apoiar o crescimento do seu negócio.";
 const LOGO_TEXT = "dabitech DIGITAL SOLUTIONS";
 
 export default async function Image() {
@@ -39,7 +39,7 @@ export default async function Image() {
           justifyContent: "center",
           padding: "80px",
           backgroundImage:
-            "radial-gradient(circle at 15% 0%, rgba(0,182,230,0.22), transparent 42%), linear-gradient(190deg, #0B2A57 0%, #050D1C 78%)",
+            "radial-gradient(circle at 15% 0%, rgba(0,182,230,0.22), transparent 42%), linear-gradient(190deg, #091A30 0%, #061120 78%)",
         }}
       >
         <div style={{ display: "flex", fontFamily: "Fredoka", fontSize: 56, fontWeight: 600 }}>
@@ -64,7 +64,7 @@ export default async function Image() {
             display: "flex",
             fontFamily: "Archivo",
             fontWeight: 800,
-            fontSize: 58,
+            fontSize: 54,
             lineHeight: 1.12,
             letterSpacing: -1,
             color: "#eef3fa",
