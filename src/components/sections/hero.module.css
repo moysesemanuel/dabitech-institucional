@@ -19,16 +19,16 @@
 }
 
 .title {
-  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
-  font-weight: 900;
+  font-size: clamp(2rem, 3.3vw, 2.75rem);
+  font-weight: 700;
   line-height: 1.06;
   letter-spacing: -0.025em;
-  max-width: 17ch;
+  max-width: 24ch;
   margin-bottom: 1.5rem;
 }
 
 .lede {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.55;
   color: var(--muted-on-dark);
   max-width: 52ch;
@@ -40,17 +40,6 @@
   align-items: center;
   gap: 1.25rem;
   flex-wrap: wrap;
-  margin-bottom: 2.75rem;
-}
-
-.about {
-  margin-top: 2.5rem;
-}
-.about p {
-  max-width: 64ch;
-}
-.about p + p {
-  margin-top: 1rem;
 }
 
 @media (max-width: 640px) {

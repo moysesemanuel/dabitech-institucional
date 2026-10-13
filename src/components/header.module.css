@@ -10,7 +10,7 @@
 .inner {
   max-width: var(--maxw-wide);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,20 +33,21 @@
 .navLink {
   color: var(--muted-on-dark);
   text-decoration: none;
-  font-size: 0.94rem;
+  font-size: 0.875rem;
 }
 .navLink:hover {
   color: var(--paper);
 }
 
-.navCta {
-  padding: 0.55rem 1.2rem;
-  font-size: 0.9rem;
+.nav .navCta {
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 640px) {
   .inner {
-    padding: 0.9rem 1.25rem;
+    padding: 0.4rem 1.25rem;
   }
   .nav {
     gap: 0.9rem 1rem;
