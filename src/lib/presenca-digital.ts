@@ -3,7 +3,7 @@ import { WHATSAPP_URL } from "@/lib/site";
 export const LANDING_PATH = "/presenca-digital";
 
 export const WA_MESSAGE =
-  "Olá! Conheci o DaBi Presença Digital e gostaria de criar um site profissional para meu negócio.";
+  "Olá! Vim pelo site da DaBi Tech e gostaria de criar um site profissional para meu negócio.";
 export const WA_LINK = `${WHATSAPP_URL}?text=${encodeURIComponent(WA_MESSAGE)}`;
 
 export const PRICE = {

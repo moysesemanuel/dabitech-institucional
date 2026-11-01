@@ -22,9 +22,11 @@ export const SCREENSHOTS: { agendai: Screenshot; price: Screenshot } = {
 export const PRICE_CAPTION = "Exemplo de configuração para impressão 3D";
 
 export const ABOUT_PATH = "/sobre";
+export const PRESENCA_PATH = "/presenca-digital";
 
 export const NAV_LINKS = [
   { href: "/#solucoes", label: "Soluções" },
+  { href: PRESENCA_PATH, label: "Presença Digital" },
   { href: "/#o-que-fazemos", label: "O que fazemos" },
   { href: ABOUT_PATH, label: "Sobre" },
   { href: "#contato", label: "Contato" },
@@ -48,14 +50,14 @@ export const HERO_BENEFITS = [
 ] as const;
 
 export type Solution = {
-  id: "agendai" | "price" | "custom";
+  id: "agendai" | "price" | "presenca" | "custom";
   name: string;
   category: string;
   description: string;
   cta: string;
   href: string;
   external: boolean;
-  icon: "calendar" | "bar-chart-fill" | "code";
+  icon: "calendar" | "bar-chart-fill" | "rocket" | "code";
 };
 
 export const SOLUTIONS: Solution[] = [
@@ -80,6 +82,17 @@ export const SOLUTIONS: Solution[] = [
     href: PRICE_LINK.href,
     external: true,
     icon: "bar-chart-fill",
+  },
+  {
+    id: "presenca",
+    name: "DaBi Presença Digital",
+    category: "Sites profissionais para pequenos negócios",
+    description:
+      "Um site de página única com a identidade do seu negócio: serviços, fotos, localização, horários e botão de WhatsApp em um endereço só. Veja exemplos, o que está incluído e o valor.",
+    cta: "Conhecer o DaBi Presença Digital",
+    href: PRESENCA_PATH,
+    external: false,
+    icon: "rocket",
   },
   {
     id: "custom",
@@ -176,6 +189,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: "DaBi Agendaí", href: SOLUTIONS[0].href, external: true },
       { label: "DaBi Price", href: PRICE_LINK.href, external: true },
+      { label: "DaBi Presença Digital", href: PRESENCA_PATH },
       { label: "Sistema sob medida", href: "/#sob-medida" },
     ],
   },
