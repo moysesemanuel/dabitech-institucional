@@ -3,6 +3,7 @@ import { Archivo, IBM_Plex_Sans, Fredoka, Poppins } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FinalCta } from "@/components/sections/final-cta";
+import { SiteChrome } from "@/components/site-chrome";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -63,12 +64,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a className="skipLink" href="#conteudo">
           Pular para o conteúdo
         </a>
-        <Header />
-        <main id="conteudo">
+        <SiteChrome header={<Header />} footer={<Footer />} finalCta={<FinalCta />}>
           {children}
-          <FinalCta />
-        </main>
-        <Footer />
+        </SiteChrome>
       </body>
     </html>
   );
