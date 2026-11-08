@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/hero";
 import { SolutionsCatalog } from "@/components/sections/solutions-catalog";
 import { Capabilities } from "@/components/sections/capabilities";
 import { Process } from "@/components/sections/process";
+import { Projects } from "@/components/sections/projects";
 import { About } from "@/components/sections/about";
 import { ScrollReset } from "@/components/scroll-reset";
 import { SOCIALS } from "@/lib/site";
@@ -33,6 +34,7 @@ export default function Home() {
       <SolutionsCatalog />
       <Capabilities />
       <Process />
+      <Projects />
       <About />
     </>
   );
