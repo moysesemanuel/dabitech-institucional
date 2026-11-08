@@ -1,4 +1,8 @@
 export const SITE_URL = "https://www.dabitech.com.br";
+
+// Código de verificação de domínio do Portfólio Empresarial da Meta.
+export const META_DOMAIN_VERIFICATION = "p0fjqoup32irx7sx3uxfzdzucf929j";
+
 export const PHONE_DISPLAY = "(41) 98887-5659";
 export const WHATSAPP_URL = "https://wa.me/5541988875659";
 
