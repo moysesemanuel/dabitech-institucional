@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FinalCta } from "@/components/sections/final-cta";
 import { SiteChrome } from "@/components/site-chrome";
-import { SITE_URL } from "@/lib/site";
+import { META_DOMAIN_VERIFICATION, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
   },
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
+  verification: { other: { "facebook-domain-verification": META_DOMAIN_VERIFICATION } },
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B5CE6'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3Ed%3C/text%3E%3C/svg%3E",
   },
