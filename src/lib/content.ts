@@ -210,3 +210,13 @@ export const FOOTER_COLUMNS = [
     ],
   },
 ];
+
+export type ProjectLogo = { name: string; icon: string };
+
+// Projetos já entregues, exibidos no carrossel da home. Ícones em /public/projetos (quadrados).
+export const PROJECT_LOGOS: ProjectLogo[] = [
+  { name: "DaBi Agendaí", icon: "/projetos/agendai.svg" },
+  { name: "DaBi Price", icon: "/projetos/price.svg" },
+  { name: "DaBi Cuidaí", icon: "/projetos/cuidai.svg" },
+  { name: "DaBi Rodaí", icon: "/projetos/ride-reader.png" },
+];
