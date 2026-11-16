@@ -219,4 +219,5 @@ export const PROJECT_LOGOS: ProjectLogo[] = [
   { name: "DaBi Price", icon: "/projetos/price.svg" },
   { name: "DaBi Cuidaí", icon: "/projetos/cuidai.svg" },
   { name: "DaBi Rodaí", icon: "/projetos/ride-reader.png" },
+  { name: "Custô", icon: "/projetos/custo.svg" },
 ];
