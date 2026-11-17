@@ -211,7 +211,8 @@ export const FOOTER_COLUMNS = [
   },
 ];
 
-export type ProjectLogo = { name: string; icon: string };
+// `wordmark`: logo horizontal que já traz o nome; aparece sozinho, sem o ícone quadrado e o texto.
+export type ProjectLogo = { name: string; icon: string; wordmark?: { width: number; height: number } };
 
 // Projetos já entregues, exibidos no carrossel da home. Ícones em /public/projetos (quadrados).
 export const PROJECT_LOGOS: ProjectLogo[] = [
@@ -219,5 +220,5 @@ export const PROJECT_LOGOS: ProjectLogo[] = [
   { name: "DaBi Price", icon: "/projetos/price.svg" },
   { name: "DaBi Cuidaí", icon: "/projetos/cuidai.svg" },
   { name: "DaBi Rodaí", icon: "/projetos/ride-reader.png" },
-  { name: "Custô", icon: "/projetos/custo.svg" },
+  { name: "Custô", icon: "/projetos/custo.svg", wordmark: { width: 3977, height: 1120 } },
 ];

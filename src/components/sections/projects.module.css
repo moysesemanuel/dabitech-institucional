@@ -49,6 +49,12 @@
   object-fit: contain;
 }
 
+/* altura próxima à do texto dos outros itens; a largura segue a proporção do logo */
+.wordmark {
+  width: auto;
+  height: 1.75rem;
+}
+
 .name {
   color: var(--text);
   font-family: var(--font-display);

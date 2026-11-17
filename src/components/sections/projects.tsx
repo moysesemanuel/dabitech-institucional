@@ -29,8 +29,20 @@ export function Projects() {
                 // a segunda metade só existe para o loop; leitores de tela leem uma vez
                 aria-hidden={copy === 1 ? true : undefined}
               >
-                <Image src={logo.icon} alt="" width={40} height={40} className={styles.icon} />
-                <span className={styles.name}>{logo.name}</span>
+                {logo.wordmark ? (
+                  <Image
+                    src={logo.icon}
+                    alt={logo.name}
+                    width={logo.wordmark.width}
+                    height={logo.wordmark.height}
+                    className={styles.wordmark}
+                  />
+                ) : (
+                  <>
+                    <Image src={logo.icon} alt="" width={40} height={40} className={styles.icon} />
+                    <span className={styles.name}>{logo.name}</span>
+                  </>
+                )}
               </li>
             )),
           )}
