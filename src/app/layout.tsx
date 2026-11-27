@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Archivo, IBM_Plex_Sans, Fredoka, Poppins } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -68,6 +69,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteChrome header={<Header />} footer={<Footer />} finalCta={<FinalCta />}>
           {children}
         </SiteChrome>
+        {/* Contagem de visitas e páginas (Vercel Web Analytics, sem cookies), lida pelo Dabi Hub. */}
+        <Analytics />
       </body>
     </html>
   );
